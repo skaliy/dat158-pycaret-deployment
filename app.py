@@ -8,7 +8,7 @@ import os
 class StreamlitApp:
     
     def __init__(self):
-        self.model = load_model('final_model_heart_failure') 
+        self.model = load_model('model/final_model_heart_failure') 
         self.save_fn = 'path.csv'     
         
     def predict(self, input_data): 
@@ -25,7 +25,7 @@ class StreamlitApp:
             
     
     def run(self):
-        image = Image.open('../assets/human-heart.jpg')
+        image = Image.open('assets/human-heart.jpg')
         st.image(image, use_column_width=False)
     
     
