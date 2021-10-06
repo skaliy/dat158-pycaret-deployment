@@ -1,4 +1,4 @@
-from pycaret.classification import *#load_model, predict_model
+from pycaret.classification import load_model, predict_model
 import pandas as pd 
 import numpy as np
 import streamlit as st
@@ -70,7 +70,7 @@ class StreamlitApp:
             st.success('Predicted output: {}'.format(output))
             
         if add_selectbox == 'Batch': 
-            fn = st.file_uploader("Upload csv file for predictions") #st.file_uploader('Upload csv file for predictions, type=["csv"]')
+            fn = st.file_uploader("Upload csv file for predictions") 
             if fn is not None: 
                 input_df = pd.read_csv(fn)
                 predictions = self.predict(input_df)
